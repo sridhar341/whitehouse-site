@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>White House Media</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="White House Media is a Bangalore media house for social media, ads & branding — turning attention into growth. Ideas. Content. Impact.">
+<link rel="canonical" href="https://whitehousemedia.in/">
+<meta name="theme-color" content="#0e0c09">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="White House Media">
+<meta property="og:title" content="White House Media — We make brands stand out">
+<meta property="og:description" content="Social media, ads & branding from Bangalore. Turning attention into growth.">
+<meta property="og:url" content="https://whitehousemedia.in/">
+<meta property="og:image" content="https://whitehousemedia.in/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@heyywhitehouse">
+<meta name="twitter:title" content="White House Media — We make brands stand out">
+<meta name="twitter:description" content="Social media, ads & branding from Bangalore. Turning attention into growth.">
+<meta name="twitter:image" content="https://whitehousemedia.in/og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Fragment+Mono:ital@0;1&display=swap">
+<style>
+  /* ————————————————————————————————————————
+     WHITE HOUSE MEDIA — single committed dark world.
+     Ground + every color painted explicitly.
+     ———————————————————————————————————————— */
+  :root{
+    --ink:        #0e0c09;   /* warm near-black stage       */
+    --ink-2:      #16130d;   /* raised surface              */
+    --line:       #2b251a;   /* hairlines                   */
+    --bone:       #efe8da;   /* primary type                */
+    --stone:      #9b9180;   /* secondary type              */
+    --spot:       #f0a72e;   /* the one light on stage      */
+    --spot-deep:  #c67f14;
+    --live:       #e5484d;   /* live-dot only               */
+
+    --disp: "Bricolage Grotesque", "Arial Narrow", Impact, sans-serif;
+    --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+    --mono: "Fragment Mono", "Courier New", monospace;
+
+    --gutter: clamp(24px, 4.5vw, 64px);
+    --ease: cubic-bezier(.22,.9,.28,1);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--ink);
+    color:var(--bone);
+    font-family:var(--disp);
+    font-weight:300;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* film grain over everything */
+  body::after{
+    content:""; position:fixed; inset:-50%; z-index:9; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  ::selection{ background:var(--spot); color:var(--ink); }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; }
+
+  .mono{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; }
+  .serif-it{ font-family:var(--serif); font-style:italic; font-weight:400; }
+
+  :focus-visible{ outline:2px solid var(--spot); outline-offset:3px; border-radius:2px; }
+
+  .wrap{ max-width:1440px; margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); }
+
+  /* ————— header ————— */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:20;
+    background:linear-gradient(to bottom, rgba(14,12,9,.92), rgba(14,12,9,0));
+    backdrop-filter:blur(2px);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:20px; padding-bottom:20px;
+  }
+  .wordmark{ display:flex; align-items:center; gap:11px; }
+  .mark{ display:block; width:26px; height:26px; color:var(--bone); flex:none; opacity:.95; }
+  .wordmark strong{
+    font-weight:800; font-size:1.05rem; letter-spacing:.02em; color:var(--bone);
+  }
+  .wordmark span{ font-family:var(--mono); font-size:.62rem; letter-spacing:.16em; color:var(--stone); text-transform:uppercase; }
+  .nav-links{ display:flex; gap:34px; align-items:center; }
+  .nav-links a.link{
+    font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--stone); position:relative; padding:4px 0;
+    transition:color .3s var(--ease);
+  }
+  .nav-links a.link::after{
+    content:""; position:absolute; left:0; bottom:0; height:1px; width:100%;
+    background:var(--spot); transform:scaleX(0); transform-origin:right;
+    transition:transform .35s var(--ease);
+  }
+  .nav-links a.link:hover{ color:var(--bone); }
+  .nav-links a.link:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+  /* buttons */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.13em; text-transform:uppercase;
+    padding:14px 24px; border-radius:999px; border:1px solid var(--line);
+    color:var(--bone); background:transparent; cursor:pointer;
+    transition:background .35s var(--ease), color .35s var(--ease),
+               border-color .35s var(--ease), transform .35s var(--ease);
+    will-change:transform;
+  }
+  .btn .arr{ transition:transform .35s var(--ease); }
+  .btn:hover{ border-color:var(--bone); transform:translateY(-2px); }
+  .btn:hover .arr{ transform:translateX(4px); }
+  .btn:active{ transform:translateY(0) scale(.98); }
+  .btn.solid{ background:var(--spot); border-color:var(--spot); color:var(--ink); font-weight:700; }
+  .btn.solid:hover{ background:var(--bone); border-color:var(--bone); }
+
+  /* ————— hero ————— */
+  .hero{
+    min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end;
+    position:relative; padding-bottom:8vh; padding-top:120px;
+  }
+  .hero-glow{
+    position:absolute; top:-22vh; right:-14vw; width:60vw; height:60vw;
+    max-width:900px; max-height:900px; border-radius:50%; pointer-events:none;
+    background:radial-gradient(circle, rgba(240,167,46,.13) 0%, rgba(240,167,46,.04) 40%, transparent 68%);
+  }
+  .hero-eyebrow{
+    display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-bottom:5vh;
+    color:var(--stone);
+  }
+  .live{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--line); border-radius:999px; padding:7px 14px;
+    font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--bone);
+  }
+  .live i{
+    width:7px; height:7px; border-radius:50%; background:var(--live);
+    box-shadow:0 0 0 0 rgba(229,72,77,.6); animation:pulse 2s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow:0 0 0 0 rgba(229,72,77,.55); }
+    70%{ box-shadow:0 0 0 8px rgba(229,72,77,0); }
+    100%{ box-shadow:0 0 0 0 rgba(229,72,77,0); }
+  }
+
+  h1{
+    font-weight:800; line-height:.92; letter-spacing:-.02em; text-wrap:balance;
+    font-size:clamp(3.2rem, 11.5vw, 11rem);
+    text-transform:uppercase;
+  }
+  h1 .row{ display:block; overflow:hidden; }
+  h1 .row > span{ display:inline-block; }
+  h1 .row.r2{ padding-left:clamp(2rem, 12vw, 14rem); }   /* asymmetric stagger */
+  h1 .standout{
+    font-family:var(--serif); font-style:italic; font-weight:400; text-transform:none;
+    color:var(--spot); letter-spacing:0; margin-left:.06em;
+    display:inline-block; transform:rotate(-2deg);
+  }
+  .hero-foot{
+    display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+    gap:40px; align-items:end; margin-top:6vh;
+  }
+  .hero-sub{
+    color:var(--stone); font-size:clamp(1rem, 1.4vw, 1.25rem); max-width:34ch; line-height:1.6;
+  }
+  .hero-sub em{ font-family:var(--serif); font-style:italic; color:var(--bone); }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end; }
+
+  /* load-in animation (hero only) */
+  .li{ opacity:0; transform:translateY(36px); }
+  h1 .row > span.li{ transform:translateY(110%); }
+  .loaded .li,
+  .loaded h1 .row > span.li{
+    opacity:1; transform:translateY(0);
+    transition:opacity .9s var(--ease), transform .9s var(--ease);
+  }
+  .loaded .d1{ transition-delay:.05s; } .loaded .d2{ transition-delay:.18s; }
+  .loaded .d3{ transition-delay:.31s; } .loaded .d4{ transition-delay:.44s; }
+  .loaded .d5{ transition-delay:.6s; }  .loaded .d6{ transition-delay:.72s; }
+
+  /* ————— ticker ————— */
+  .ticker{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    overflow:hidden; padding:18px 0; background:var(--ink-2);
+  }
+  .ticker-track{
+    display:flex; gap:0; width:max-content;
+    animation:marquee 26s linear infinite;
+  }
+  .ticker:hover .ticker-track{ animation-play-state:paused; }
+  .ticker-chunk{
+    display:flex; align-items:center; gap:28px; padding-right:28px;
+    font-weight:700; font-size:1rem; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--stone); white-space:nowrap;
+  }
+  .ticker-chunk b{ color:var(--spot); font-weight:400; }
+  @keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+  /* ————— shared section chrome ————— */
+  section{ position:relative; }
+  .sec-head{
+    display:flex; align-items:baseline; justify-content:space-between; gap:20px;
+    padding-top:110px; margin-bottom:64px;
+  }
+  .sec-head .kicker{ color:var(--spot); }
+  .sec-head h2{
+    font-weight:800; text-transform:uppercase; letter-spacing:-.015em; line-height:.95;
+    font-size:clamp(2rem, 5vw, 4.2rem); text-wrap:balance;
+  }
+  .sec-head .count{ color:var(--stone); font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; }
+
+  /* scroll reveal */
+  .rv{ opacity:0; transform:translateY(44px); }
+  .rv.in{
+    opacity:1; transform:translateY(0);
+    transition:opacity .85s var(--ease), transform .85s var(--ease);
+    transition-delay:var(--rd, 0s);
+  }
+  .rv.from-left{ transform:translateX(-44px); }
+  .rv.from-right{ transform:translateX(44px); }
+  .rv.from-left.in, .rv.from-right.in{ transform:translateX(0); }
+
+  /* ————— services — asymmetric stagger ————— */
+  .services{ display:grid; grid-template-columns:repeat(12, 1fr); gap:24px; }
+  .card{
+    border:1px solid var(--line); background:var(--ink-2); border-radius:20px;
+    padding:34px 30px 30px; display:flex; flex-direction:column; gap:26px;
+    min-height:380px; position:relative; overflow:hidden;
+    transition:transform .45s var(--ease), border-color .45s var(--ease), background .45s var(--ease);
+  }
+  .card::before{
+    content:""; position:absolute; inset:0; opacity:0; pointer-events:none;
+    background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%), rgba(240,167,46,.1), transparent 60%);
+    transition:opacity .45s var(--ease);
+  }
+  .card:hover{ transform:translateY(-8px); border-color:#4a3f2a; }
+  .card:hover::before{ opacity:1; }
+  .card .tag{ color:var(--spot); }
+  .card h3{
+    font-weight:700; font-size:clamp(1.5rem, 2.4vw, 2.1rem); line-height:1.05;
+    letter-spacing:-.01em; text-wrap:balance;
+  }
+  .card p{ color:var(--stone); font-size:.95rem; max-width:38ch; }
+  .card ul{ list-style:none; margin-top:auto; display:flex; flex-direction:column; }
+  .card ul li{
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--bone); padding:11px 0; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:12px;
+  }
+  .card ul li span{ color:var(--stone); }
+  .c1{ grid-column:1 / span 4;  margin-top:0; }
+  .c2{ grid-column:5 / span 4;  margin-top:72px; }
+  .c3{ grid-column:9 / span 4;  margin-top:150px; }
+
+  /* ————— statement ————— */
+  .statement{ padding-top:160px; padding-bottom:40px; }
+  .statement p{
+    font-weight:500; font-size:clamp(1.7rem, 3.6vw, 3.4rem); line-height:1.18;
+    letter-spacing:-.01em; max-width:22ch; text-wrap:balance;
+  }
+  .statement p em{ font-family:var(--serif); font-style:italic; font-weight:400; color:var(--spot); }
+  .statement .side{
+    margin-top:34px; color:var(--stone); max-width:44ch; font-size:1rem;
+    margin-left:auto; margin-right:clamp(0px, 6vw, 120px);
+  }
+
+  /* ————— approach (a real sequence → numbered) ————— */
+  .steps{ display:flex; flex-direction:column; }
+  .step{
+    display:grid; grid-template-columns:120px minmax(0,5fr) minmax(0,6fr);
+    gap:28px; align-items:baseline;
+    padding:38px 0; border-top:1px solid var(--line);
+    transition:background .4s var(--ease), padding-left .4s var(--ease);
+  }
+  .step:last-child{ border-bottom:1px solid var(--line); }
+  .step:hover{ background:var(--ink-2); padding-left:18px; }
+  .step .no{ font-family:var(--mono); color:var(--spot); font-size:.8rem; letter-spacing:.14em; }
+  .step h3{ font-weight:700; font-size:clamp(1.4rem, 2.6vw, 2.3rem); text-transform:uppercase; letter-spacing:-.01em; }
+  .step p{ color:var(--stone); max-width:52ch; }
+
+  /* ————— contact ————— */
+  .contact{ padding-top:150px; padding-bottom:60px; }
+  .contact .kicker{ color:var(--spot); display:block; margin-bottom:28px; }
+  .mail-link{
+    display:block; font-weight:800; text-transform:none; line-height:1;
+    font-size:clamp(1.5rem, 5.4vw, 5.2rem); letter-spacing:-.02em;
+    word-break:break-all; position:relative; width:fit-content; max-width:100%;
+    transition:color .35s var(--ease);
+  }
+  .mail-link::after{
+    content:""; position:absolute; left:0; bottom:-8px; height:3px; width:100%;
+    background:var(--spot); transform:scaleX(0); transform-origin:left;
+    transition:transform .5s var(--ease);
+  }
+  .mail-link:hover{ color:var(--spot); }
+  .mail-link:hover::after{ transform:scaleX(1); }
+  .contact-grid{
+    display:grid; grid-template-columns:repeat(12,1fr); gap:24px; margin-top:72px;
+  }
+  .c-block{ grid-column:span 3; border-top:1px solid var(--line); padding-top:18px; }
+  .c-block .lbl{ color:var(--stone); display:block; margin-bottom:12px; }
+  .c-block a, .c-block span.v{
+    font-size:1.05rem; font-weight:500; position:relative; display:inline-block;
+    transition:color .3s var(--ease), transform .3s var(--ease);
+  }
+  .c-block a:hover{ color:var(--spot); transform:translateX(4px); }
+
+  footer{
+    margin-top:110px; border-top:1px solid var(--line); padding:28px 0 40px;
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    color:var(--stone);
+  }
+  footer .mono a:hover{ color:var(--spot); }
+
+  /* giant backdrop word */
+  .ghost{
+    position:absolute; right:-2vw; top:40px; z-index:-1; pointer-events:none;
+    font-weight:800; font-size:clamp(6rem, 22vw, 20rem); line-height:1;
+    color:transparent; -webkit-text-stroke:1px #241f15; text-transform:uppercase;
+    user-select:none;
+  }
+
+  /* ————— responsive ————— */
+  @media (max-width: 980px){
+    /* tighter vertical rhythm on small screens */
+    .sec-head{ padding-top:72px; margin-bottom:44px; }
+    .statement{ padding-top:88px; padding-bottom:0; }
+    .statement .side{ margin-top:22px; max-width:100%; }
+    .contact{ padding-top:96px; padding-bottom:36px; }
+    footer{ margin-top:72px; }
+    .hero{ padding-bottom:6vh; }
+    .c1,.c2,.c3{ grid-column:1 / -1; margin-top:0; }
+    .services{ gap:18px; }
+    .card{ min-height:0; }
+    .step{ grid-template-columns:64px minmax(0,1fr); }
+    .step p{ grid-column:2; }
+    .c-block{ grid-column:span 6; }
+    .hero-foot{ grid-template-columns:1fr; }
+    .hero-ctas{ justify-content:flex-start; }
+    .nav-links a.link{ display:none; }
+    .statement .side{ margin-left:0; }
+  }
+  @media (max-width: 560px){
+    .c-block{ grid-column:1 / -1; }
+    h1 .row.r2{ padding-left:1.4rem; }
+    /* compact header so nothing overflows a phone screen */
+    .nav{ gap:10px; }
+    .wordmark{ gap:8px; min-width:0; }
+    .wordmark strong{ font-size:.82rem; letter-spacing:.03em; white-space:nowrap; }
+    .wordmark span{ display:none; }
+    .mark{ width:22px; height:22px; }
+    .nav-links .btn{ padding:10px 14px; font-size:.62rem; letter-spacing:.1em; white-space:nowrap; }
+  }
+  /* never allow sideways scroll to expand the mobile viewport */
+  html, body{ overflow-x:clip; max-width:100%; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .li, h1 .row > span.li{ opacity:1; transform:none; }
+    .rv{ opacity:1; transform:none; }
+    .ticker-track{ animation:none; }
+    .live i{ animation:none; }
+    *{ transition-duration:.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="wordmark" aria-label="White House Media — home">
+      <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M39 91 H21 V47 L50 16 L79 47 V91 H61" stroke="currentColor" stroke-width="7"/>
+        <path d="M37 51 V43 H45 M55 43 H63 V51 M37 63 V71 H45 M63 63 V71 H55" stroke="currentColor" stroke-width="4.5"/>
+        <path d="M45 48 L60 57.5 L45 67 Z" fill="var(--spot)"/>
+      </svg>
+      <strong>WHITE&nbsp;HOUSE&nbsp;MEDIA</strong><span>BLR</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#approach">Approach</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn solid" href="mailto:hellowhitehousemedia@gmail.com">Let’s talk <span class="arr">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap" aria-label="Intro">
+    <div class="hero-glow" data-parallax="0.12"></div>
+    <div class="hero-eyebrow">
+      <span class="live li d1"><i></i>Taking on new brands</span>
+      <span class="mono li d2">A media house · Bangalore, India</span>
+    </div>
+    <h1>
+      <span class="row"><span class="li d3">We make</span></span>
+      <span class="row r2"><span class="li d4">brands</span></span>
+      <span class="row"><span class="li d5"><span class="standout">stand&nbsp;out.</span></span></span>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-sub li d6">Social media, ads &amp; branding — we turn <em>attention</em> into <em>growth</em>, one scroll-stopping post at a time.</p>
+      <div class="hero-ctas li d6">
+        <a class="btn solid" id="magnet" href="mailto:hellowhitehousemedia@gmail.com?subject=Let%E2%80%99s%20grow%20together">Start a project <span class="arr">→</span></a>
+        <a class="btn" href="https://www.instagram.com/white.house_production" target="_blank" rel="noopener">DM on Instagram <span class="arr">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-chunk">Social media <b>✺</b> Performance ads <b>✺</b> Branding <b>✺</b> Content <b>✺</b> Strategy <b>✺</b> Growth <b>✺</b>&nbsp;</div>
+      <div class="ticker-chunk">Social media <b>✺</b> Performance ads <b>✺</b> Branding <b>✺</b> Content <b>✺</b> Strategy <b>✺</b> Growth <b>✺</b>&nbsp;</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="wrap">
+    <span class="ghost" aria-hidden="true">Media</span>
+    <div class="sec-head rv">
+      <div>
+        <span class="mono kicker">What we do</span>
+        <h2>Everything a brand<br>needs to get seen</h2>
+      </div>
+      <span class="count">3 disciplines</span>
+    </div>
+    <div class="services">
+      <article class="card c1 rv" style="--rd:.0s">
+        <span class="mono tag">SOC — Social media</span>
+        <h3>Feeds people actually stop&nbsp;for</h3>
+        <p>We run your social like a media channel, not a chore — strategy, content and community that build an audience worth owning.</p>
+        <ul>
+          <li>Content strategy <span>+ calendars</span></li>
+          <li>Reels &amp; short-form <span>+ edits</span></li>
+          <li>Page management <span>+ community</span></li>
+          <li>Trends &amp; hooks <span>+ captions</span></li>
+        </ul>
+      </article>
+      <article class="card c2 rv" style="--rd:.12s">
+        <span class="mono tag">ADS — Performance</span>
+        <h3>Ads that earn their budget&nbsp;back</h3>
+        <p>Creative-first campaigns on Meta and Google — built to stop the scroll, tested relentlessly, scaled when the numbers say so.</p>
+        <ul>
+          <li>Meta &amp; Google ads <span>+ funnels</span></li>
+          <li>Ad creatives <span>+ hooks</span></li>
+          <li>Landing &amp; retargeting <span>+ CRO</span></li>
+          <li>Tracking &amp; reporting <span>+ clarity</span></li>
+        </ul>
+      </article>
+      <article class="card c3 rv" style="--rd:.24s">
+        <span class="mono tag">BRD — Branding</span>
+        <h3>An identity people remember</h3>
+        <p>Name, look, voice — the foundations that make every post and every ad unmistakably yours before the logo even loads.</p>
+        <ul>
+          <li>Brand identity <span>+ logo</span></li>
+          <li>Design systems <span>+ templates</span></li>
+          <li>Voice &amp; messaging <span>+ tone</span></li>
+          <li>Launch kits <span>+ collateral</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement wrap">
+    <p class="rv">The feed is loud. We make your brand the part people <em>stop for</em> — and the reason they come back.</p>
+    <p class="side rv" style="--rd:.15s">White House Media is a Bangalore media house working with founders and growing businesses. Small team, senior attention, no hand-offs — the people you meet are the people who make your work.</p>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="mono kicker">How we work</span>
+        <h2>Attention, engineered<br>in four moves</h2>
+      </div>
+      <span class="count">01 — 04</span>
+    </div>
+    <div class="steps">
+      <div class="step rv from-left">
+        <span class="no">01</span>
+        <h3>Listen</h3>
+        <p>We audit your brand, your audience and your competitors — what’s working, what’s invisible, and where the attention actually lives.</p>
+      </div>
+      <div class="step rv from-left" style="--rd:.08s">
+        <span class="no">02</span>
+        <h3>Position</h3>
+        <p>One sharp point of view: who you’re for, what you sound like, and why anyone should stop scrolling for you.</p>
+      </div>
+      <div class="step rv from-left" style="--rd:.16s">
+        <span class="no">03</span>
+        <h3>Create</h3>
+        <p>Content, campaigns and creatives built on that position — made fast, made well, made to be noticed.</p>
+      </div>
+      <div class="step rv from-left" style="--rd:.24s">
+        <span class="no">04</span>
+        <h3>Amplify</h3>
+        <p>Distribution and ads push what performs; the numbers tell us what to double down on. Attention in, growth out.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact wrap">
+    <span class="mono kicker rv">DM us — let’s grow together</span>
+    <a class="mail-link rv" style="--rd:.1s" href="mailto:hellowhitehousemedia@gmail.com">hellowhitehousemedia<span class="serif-it" style="color:var(--spot)">@</span>gmail.com</a>
+    <div class="contact-grid">
+      <div class="c-block rv" style="--rd:.05s">
+        <span class="mono lbl">Call / WhatsApp</span>
+        <a href="tel:+917349296896">+91 73492 96896</a>
+      </div>
+      <div class="c-block rv" style="--rd:.12s">
+        <span class="mono lbl">Instagram</span>
+        <a href="https://www.instagram.com/white.house_production" target="_blank" rel="noopener">@white.house_production ↗</a>
+      </div>
+      <div class="c-block rv" style="--rd:.19s">
+        <span class="mono lbl">X / Twitter</span>
+        <a href="https://x.com/heyywhitehouse" target="_blank" rel="noopener">@heyywhitehouse ↗</a>
+      </div>
+      <div class="c-block rv" style="--rd:.26s">
+        <span class="mono lbl">Studio</span>
+        <span class="v">Bangalore, India</span>
+      </div>
+    </div>
+    <footer>
+      <span class="mono">© 2026 White House Media</span>
+      <span class="mono">Ideas <span style="color:var(--spot)">·</span> Content <span style="color:var(--spot)">·</span> Impact</span>
+      <span class="mono"><a href="#top">Back to top ↑</a></span>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero load-in */
+  window.addEventListener('load', function(){
+    requestAnimationFrame(function(){ document.body.classList.add('loaded'); });
+  });
+  /* fallback in case load already fired */
+  if (document.readyState === 'complete') document.body.classList.add('loaded');
+
+  /* scroll reveals */
+  var revealed = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+    revealed.forEach(function(el){ io.observe(el); });
+  } else {
+    revealed.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* card spotlight follows cursor */
+  document.querySelectorAll('.card').forEach(function(card){
+    card.addEventListener('pointermove', function(ev){
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((ev.clientX - r.left) / r.width * 100) + '%');
+      card.style.setProperty('--my', ((ev.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+
+  /* gentle parallax on the hero glow */
+  var par = document.querySelector('[data-parallax]');
+  if (par && !reduce){
+    var speed = parseFloat(par.getAttribute('data-parallax')) || 0.1, ticking = false;
+    window.addEventListener('scroll', function(){
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(function(){
+        par.style.transform = 'translateY(' + (window.scrollY * speed) + 'px)';
+        ticking = false;
+      });
+    }, { passive:true });
+  }
+
+  /* magnetic primary CTA */
+  var mag = document.getElementById('magnet');
+  if (mag && !reduce && window.matchMedia('(hover:hover)').matches){
+    mag.addEventListener('pointermove', function(ev){
+      var r = mag.getBoundingClientRect();
+      var x = (ev.clientX - r.left - r.width/2) * 0.18;
+      var y = (ev.clientY - r.top - r.height/2) * 0.3;
+      mag.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    });
+    mag.addEventListener('pointerleave', function(){ mag.style.transform = ''; });
+  }
+})();
+</script>
+
+</body>
+</html>
