@@ -44,7 +44,7 @@
     --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
     --mono: "Fragment Mono", "Courier New", monospace;
 
-    --gutter: clamp(20px, 4vw, 64px);
+    --gutter: clamp(24px, 4.5vw, 64px);
     --ease: cubic-bezier(.22,.9,.28,1);
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -261,7 +261,7 @@
   .c3{ grid-column:9 / span 4;  margin-top:150px; }
 
   /* ————— statement ————— */
-  .statement{ padding:160px 0 40px; }
+  .statement{ padding-top:160px; padding-bottom:40px; }
   .statement p{
     font-weight:500; font-size:clamp(1.7rem, 3.6vw, 3.4rem); line-height:1.18;
     letter-spacing:-.01em; max-width:22ch; text-wrap:balance;
@@ -287,7 +287,7 @@
   .step p{ color:var(--stone); max-width:52ch; }
 
   /* ————— contact ————— */
-  .contact{ padding:150px 0 60px; }
+  .contact{ padding-top:150px; padding-bottom:60px; }
   .contact .kicker{ color:var(--spot); display:block; margin-bottom:28px; }
   .mail-link{
     display:block; font-weight:800; text-transform:none; line-height:1;
@@ -330,6 +330,13 @@
 
   /* ————— responsive ————— */
   @media (max-width: 980px){
+    /* tighter vertical rhythm on small screens */
+    .sec-head{ padding-top:72px; margin-bottom:44px; }
+    .statement{ padding-top:88px; padding-bottom:0; }
+    .statement .side{ margin-top:22px; max-width:100%; }
+    .contact{ padding-top:96px; padding-bottom:36px; }
+    footer{ margin-top:72px; }
+    .hero{ padding-bottom:6vh; }
     .c1,.c2,.c3{ grid-column:1 / -1; margin-top:0; }
     .services{ gap:18px; }
     .card{ min-height:0; }
@@ -344,7 +351,16 @@
   @media (max-width: 560px){
     .c-block{ grid-column:1 / -1; }
     h1 .row.r2{ padding-left:1.4rem; }
+    /* compact header so nothing overflows a phone screen */
+    .nav{ gap:10px; }
+    .wordmark{ gap:8px; min-width:0; }
+    .wordmark strong{ font-size:.82rem; letter-spacing:.03em; white-space:nowrap; }
+    .wordmark span{ display:none; }
+    .mark{ width:22px; height:22px; }
+    .nav-links .btn{ padding:10px 14px; font-size:.62rem; letter-spacing:.1em; white-space:nowrap; }
   }
+  /* never allow sideways scroll to expand the mobile viewport */
+  html, body{ overflow-x:clip; max-width:100%; }
 
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
